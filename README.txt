@@ -1,7 +1,7 @@
 These are all the assignments for Advanced Java. (using JavaSE-11)
 It is organized into two folders: homework and classwork
 
-classwork packages are organized as the following:
+Classwork packages are organized as the following:
 week(number)(day)_(assignment name)
 
 Meanwhile homework is named by:
