@@ -22,7 +22,8 @@ HOW TO RUN
 	
 	Terminal
 	3. Open your terminal or command prompt
-	4. run java -jar TodoList.jar
+	4. navigate to the folder holding TodoList.jar
+	5. run: java -jar TodoList.jar
 	
 	
 HOW TO USE
