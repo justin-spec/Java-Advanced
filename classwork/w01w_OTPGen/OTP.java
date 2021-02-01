@@ -34,7 +34,7 @@ public class OTP extends JFrame implements ActionListener {
 	//CompanyAuth test = new CompanyAuth("test");
 	
 	// arrays for each new company being added
-	private static ArrayList<CompanyAuth> companyAuths = new ArrayList<CompanyAuth>();
+	private static ArrayList<Company> companies = new ArrayList<Company>();
 	private static ArrayList<JLabel> labels = new ArrayList<JLabel>();
 	private static ArrayList<JButton> refreshButtons = new ArrayList<JButton>();
 	
@@ -55,8 +55,8 @@ public class OTP extends JFrame implements ActionListener {
 	
 	// creates new company label with OTP and refresh button
 	private void createLabel(String companyName) {
-		CompanyAuth newCompany = new CompanyAuth(companyName);
-		companyAuths.add(newCompany);
+		Company newCompany = new Company(companyName);
+		companies.add(newCompany);
 		
 		JLabel label = new JLabel("<html>Company: " + companyName
 						+ "<br/>OTP: " + String.valueOf(newCompany.getOTP()) + "</html>");
@@ -88,9 +88,11 @@ public class OTP extends JFrame implements ActionListener {
 	}
 	
 	private static void refreshOTP(int index) {
-		companyAuths.get(index).newOTP();
-		labels.get(index).setText("<html>Company: " + companyAuths.get(index).getCompanyName() 
-				+ "<br/>OTP: " + String.valueOf(companyAuths.get(index).getOTP()) + "</html>");
+		// sets new OTP
+		companies.get(index).newOTP();
+		// gets index of refresh button, then sets the text to the new otp
+		labels.get(index).setText("<html>Company: " + companies.get(index).getName() 
+				+ "<br/>OTP: " + String.valueOf(companies.get(index).getOTP()) + "</html>");
 	}
 	
 	public static void main(String[] args) {
