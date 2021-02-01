@@ -2,19 +2,21 @@ package w01w_OTPGen;
 
 import java.util.Random;
 
+// My code
+
 public class Company {
 	
 	private String name;
-	private char[] code;
+	private String code;
 	
 	Company(){
 		name = "Unknown";
-		//code = null;
+		code = null;
 	}
 	
 	public Company(String companyName){
 		name = companyName;
-		//code = null;
+		code = null;
 	}
 	
 	// generates code
@@ -35,7 +37,7 @@ public class Company {
 	
 	public void createCode(int len) {
 		System.out.println("Generating OTP Number.");
-		String num = "1234567890";
+		String num = "1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		
 		Random rng = new Random();
 		char[] otp = new char [len];
@@ -45,7 +47,7 @@ public class Company {
 			otp[i] = num.charAt(rng.nextInt(num.length()));
 		}
 		
-		code = otp;
+		code = String.valueOf(otp);
 	}
 	
 	
@@ -57,5 +59,9 @@ public class Company {
 	
 	public String getName() {
 		return name;
+	}
+	
+	public String getOTP() {
+		return code;
 	}
 }
