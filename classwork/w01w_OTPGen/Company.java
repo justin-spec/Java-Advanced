@@ -29,7 +29,7 @@ public class Company {
 	// generates code
 	// default
 	public void newOTP() {
-		System.out.println("Generating OTP Number.");
+		//System.out.println("Generating OTP Number.");
 		String num = "1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		
 		Random rng = new Random();
@@ -44,7 +44,7 @@ public class Company {
 	}
 	// custom
 	public void newOTP(int len) {
-		System.out.println("Generating OTP Number.");
+		//System.out.println("Generating OTP Number.");
 		String num = "1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		
 		Random rng = new Random();

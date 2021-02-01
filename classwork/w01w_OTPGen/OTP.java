@@ -96,8 +96,8 @@ public class OTP extends JFrame implements ActionListener {
 	}
 	
 	public static void main(String[] args) {
+		// opens swing
 		new OTP();
-
 	}
 
 	@Override
@@ -122,6 +122,9 @@ public class OTP extends JFrame implements ActionListener {
 	}
 
 }
+
+
+// OLD CODE FOR NOTES
 
 /*
 //Alexander Aghili
